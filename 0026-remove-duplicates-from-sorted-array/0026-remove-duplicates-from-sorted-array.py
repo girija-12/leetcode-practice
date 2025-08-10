@@ -1,6 +1,11 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        k=list(set(nums))
-        n=len(k)
-        nums[:n]=k
+        k=set(nums)
+        res=[]
+        for x in nums:
+            if x in k:
+                res.append(x)
+                k.discard(x)
+        n=len(res)
+        nums[:n]=res
         return n
