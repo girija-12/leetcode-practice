@@ -5,9 +5,8 @@ class NumArray:
 
     def sumRange(self, left: int, right: int) -> int:
         sum=0
-        while(left<=right):
-            sum+=self.nums[left]
-            left+=1
+        for i in range(left, right+1):
+            sum+=self.nums[i]
         return sum
 
 
