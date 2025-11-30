@@ -1,9 +1,14 @@
 class Solution:
     def reverseVowels(self, s: str) -> str:
-        arr=[x for x in s if x in 'aeiouAEIOU'][::-1]
-        i, s = 0, list(s)
-        for x in range(len(s)):
-            if s[x] in arr:
-                s[x]=arr[i]
-                i+=1
-        return "".join(s)
+        vowels = 'aeiouAEIOU'
+        s = list(s)
+        i, j = 0, len(s) - 1
+        while i < j:
+            while i < j and s[i] not in vowels:
+                i += 1
+            while i < j and s[j] not in vowels:
+                j -= 1
+            s[i], s[j] = s[j], s[i]
+            i += 1
+            j -= 1
+        return ''.join(s)
