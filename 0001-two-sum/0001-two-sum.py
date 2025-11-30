@@ -3,7 +3,7 @@ class Solution:
         for i in range(len(nums)):
             diff = target - nums[i]
             try:
-                diff_ind = nums.index(diff, i + 1)
-                return [i,diff_ind]
+                ind = nums.index(diff, i + 1)
+                return [i,ind]
             except ValueError:
                 continue
