@@ -4,8 +4,8 @@ class Solution:
         print(costs)
         i=0
         count=0
-        for x in range(len(costs)):
-            i+=costs[x]
+        for x in costs:
+            i+=x
             if i>coins:
                 break
             count+=1
