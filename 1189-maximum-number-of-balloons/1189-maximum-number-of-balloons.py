@@ -4,6 +4,6 @@ class Solution:
         for x in text:
             if x in freq:
                 freq[x]+=1
-        freq['l']/=2
-        freq['o']/=2
-        return int(min(freq.values()))
+        freq['l']//=2
+        freq['o']//=2
+        return min(freq.values())
