@@ -7,6 +7,4 @@ class Solution:
         for i in range(k,len(s)):
             subs=subs[1:]+s[i]
             seen.add(subs)
-        if len(seen)==2**k:
-            return True
-        return False
+        return len(seen)==2**k
